@@ -43,7 +43,6 @@ visible = false
 shape = SubResource( 1 )
 
 [node name="sounds" type="Node" parent="."]
-editor/display_folded = true
 script = ExtResource( 4 )
 __meta__ = {
 "_editor_icon": ExtResource( 5 )
@@ -59,12 +58,12 @@ __meta__ = {
 
 [node name="boop" type="AudioStreamPlayer2D" parent="sounds/collision"]
 stream = ExtResource( 8 )
-volume_db = -22.0
+volume_db = -16.0
 pitch_scale = 0.5
 bus = "FX"
 
 [node name="hit" type="AudioStreamPlayer2D" parent="sounds/collision"]
 stream = ExtResource( 9 )
-volume_db = -10.0
+volume_db = -16.0
 bus = "FX"
 
