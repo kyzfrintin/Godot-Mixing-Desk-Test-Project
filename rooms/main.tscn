@@ -219,7 +219,6 @@ volume_db = -10.0
 bus = "Music"
 
 [node name="green" type="Node" parent="MDM"]
-editor/display_folded = true
 script = ExtResource( 4 )
 __meta__ = {
 "_editor_icon": ExtResource( 5 )
@@ -232,7 +231,6 @@ transition_beats = 2.0
 loop = true
 
 [node name="core" type="Node2D" parent="MDM/green"]
-editor/display_folded = true
 
 [node name="epiano" type="AudioStreamPlayer" parent="MDM/green/core"]
 stream = ExtResource( 19 )
