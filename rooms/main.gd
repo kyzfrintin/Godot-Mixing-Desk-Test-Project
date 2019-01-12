@@ -12,8 +12,7 @@ func _ready():
 	
 func _process(delta):
 	var dis = $player.position.distance_to(point.position)
-	dis -= 300
 	dis /= 1000
 	if dis < 1:
-		mdm._feed_param(0,dis)
+		mdm._feed_param(0,(dis*-1) + 1)
 	
