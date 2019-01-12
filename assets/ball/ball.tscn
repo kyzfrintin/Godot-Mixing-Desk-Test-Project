@@ -41,7 +41,7 @@ default_color = Color( 0, 0, 0, 1 )
 visible = false
 shape = SubResource( 1 )
 
-[node name="sounds" type="Node" parent="."]
+[node name="sounds" type="Node2D" parent="."]
 script = ExtResource( 4 )
 __meta__ = {
 "_editor_icon": ExtResource( 5 )
@@ -49,7 +49,7 @@ __meta__ = {
 volume_range = 5.0
 pitch_range = 0.07
 
-[node name="collision" type="Node" parent="sounds"]
+[node name="collision" type="Node2D" parent="sounds"]
 script = ExtResource( 6 )
 __meta__ = {
 "_editor_icon": ExtResource( 7 )
