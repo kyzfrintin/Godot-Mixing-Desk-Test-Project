@@ -1,3 +1,2 @@
 [submodule "addons"]
-	path = addons
 	url = https://github.com/kyzfrintin/Godot-Mixing-Desk
