@@ -1,19 +1,16 @@
 [gd_resource type="AudioBusLayout" load_steps=8 format=2]
 
 [sub_resource type="AudioEffectReverb" id=1]
-
 resource_name = "Reverb"
 room_size = 0.75
 damping = 1.0
 wet = 0.14
 
 [sub_resource type="AudioEffectCompressor" id=2]
-
 resource_name = "Compressor"
 threshold = -0.6
 
 [sub_resource type="AudioEffectReverb" id=3]
-
 resource_name = "Reverb"
 predelay_msec = 20.0
 predelay_feedback = 0.2
@@ -22,15 +19,12 @@ damping = 0.0
 wet = 0.3
 
 [sub_resource type="AudioEffectCompressor" id=4]
-
 resource_name = "Compressor"
 
 [sub_resource type="AudioEffectCompressor" id=5]
-
 resource_name = "Compressor"
 
 [sub_resource type="AudioEffectChorus" id=6]
-
 resource_name = "Chorus"
 voice_count = 4
 dry = 0.4
@@ -49,11 +43,9 @@ voice/4/cutoff_hz = 16000.0
 voice/4/pan = 0.0
 
 [sub_resource type="AudioEffectDelay" id=7]
-
 resource_name = "Delay"
 
 [resource]
-
 bus/1/name = "Room"
 bus/1/solo = false
 bus/1/mute = false

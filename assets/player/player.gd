@@ -1,9 +1,9 @@
 extends KinematicBody2D
 
-var speed = 4
+var speed = 1
 
-const SMIN = 1.8
-const SMAX = 4.5
+const SMIN = 0.4
+const SMAX = 1
 
 func _process(delta):
 	# set running or walking
