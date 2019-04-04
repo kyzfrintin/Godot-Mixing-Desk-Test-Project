@@ -11,5 +11,5 @@ dest_files=[ "res://.import/yellow_ranhats_3c.ogg-3ba5934d4aa6a4236fbc96d930684c
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
