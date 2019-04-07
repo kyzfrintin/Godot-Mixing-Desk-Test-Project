@@ -5,20 +5,20 @@
 [ext_resource path="res://addons/mixing-desk/music/mdm_icon.png" type="Texture" id=3]
 [ext_resource path="res://addons/mixing-desk/music/song.gd" type="Script" id=4]
 [ext_resource path="res://addons/mixing-desk/music/song_icon.png" type="Texture" id=5]
-[ext_resource path="res://addons/mixing-desk/music/containers/concat_cont.gd" type="Script" id=6]
-[ext_resource path="res://Audio/Music/game/orange/yellow_ranhats_1a.ogg" type="AudioStream" id=7]
-[ext_resource path="res://Audio/Music/game/orange/yellow_ranhats_1b.ogg" type="AudioStream" id=8]
-[ext_resource path="res://Audio/Music/game/orange/yellow_ranhats_1c.ogg" type="AudioStream" id=9]
-[ext_resource path="res://Audio/Music/game/orange/yellow_ranhats_2a.ogg" type="AudioStream" id=10]
-[ext_resource path="res://Audio/Music/game/orange/yellow_ranhats_2b.ogg" type="AudioStream" id=11]
-[ext_resource path="res://Audio/Music/game/orange/yellow_ranhats_3a.ogg" type="AudioStream" id=12]
-[ext_resource path="res://Audio/Music/game/orange/yellow_ranhats_3b.ogg" type="AudioStream" id=13]
-[ext_resource path="res://Audio/Music/game/orange/yellow_ranhats_3c.ogg" type="AudioStream" id=14]
-[ext_resource path="res://addons/mixing-desk/music/containers/core_cont.gd" type="Script" id=15]
-[ext_resource path="res://Audio/Music/game/orange/orange_epiano.ogg" type="AudioStream" id=16]
-[ext_resource path="res://Audio/Music/game/orange/orange_SpookPad.ogg" type="AudioStream" id=17]
-[ext_resource path="res://Audio/Music/game/orange/orange_Arp.ogg" type="AudioStream" id=18]
-[ext_resource path="res://Audio/Music/game/blue/blue.ogg" type="AudioStream" id=19]
+[ext_resource path="res://addons/mixing-desk/music/containers/core_cont.gd" type="Script" id=6]
+[ext_resource path="res://Audio/Music/game/orange/orange_epiano.ogg" type="AudioStream" id=7]
+[ext_resource path="res://Audio/Music/game/orange/orange_SpookPad.ogg" type="AudioStream" id=8]
+[ext_resource path="res://Audio/Music/game/orange/orange_Arp.ogg" type="AudioStream" id=9]
+[ext_resource path="res://Audio/Music/game/blue/blue.ogg" type="AudioStream" id=10]
+[ext_resource path="res://addons/mixing-desk/music/containers/concat_cont.gd" type="Script" id=11]
+[ext_resource path="res://Audio/Music/game/orange/yellow_ranhats_1a.ogg" type="AudioStream" id=12]
+[ext_resource path="res://Audio/Music/game/orange/yellow_ranhats_1b.ogg" type="AudioStream" id=13]
+[ext_resource path="res://Audio/Music/game/orange/yellow_ranhats_1c.ogg" type="AudioStream" id=14]
+[ext_resource path="res://Audio/Music/game/orange/yellow_ranhats_2a.ogg" type="AudioStream" id=15]
+[ext_resource path="res://Audio/Music/game/orange/yellow_ranhats_2b.ogg" type="AudioStream" id=16]
+[ext_resource path="res://Audio/Music/game/orange/yellow_ranhats_3a.ogg" type="AudioStream" id=17]
+[ext_resource path="res://Audio/Music/game/orange/yellow_ranhats_3b.ogg" type="AudioStream" id=18]
+[ext_resource path="res://Audio/Music/game/orange/yellow_ranhats_3c.ogg" type="AudioStream" id=19]
 [ext_resource path="res://Audio/Music/game/red/red.ogg" type="AudioStream" id=20]
 [ext_resource path="res://Audio/Music/game/purple/purple.ogg" type="AudioStream" id=21]
 [ext_resource path="res://Audio/Music/game/yellow/yellow.ogg" type="AudioStream" id=22]
@@ -77,76 +77,29 @@ random_chance = 0.3
 transition_beats = 2.0
 loop = true
 
-[node name="concathats" type="Node" parent="MDM/orange"]
+[node name="core" type="Node" parent="MDM/orange"]
+editor/display_folded = true
 script = ExtResource( 6 )
 __meta__ = {
 "_editor_icon": ExtResource( 5 )
 }
 
-[node name="ranhat1a" type="AudioStreamPlayer" parent="MDM/orange/concathats"]
+[node name="epiano" type="AudioStreamPlayer" parent="MDM/orange/core"]
 stream = ExtResource( 7 )
 volume_db = -10.0
 bus = "Music"
 
-[node name="ranhat1b" type="AudioStreamPlayer" parent="MDM/orange/concathats"]
+[node name="pad" type="AudioStreamPlayer" parent="MDM/orange/core"]
 stream = ExtResource( 8 )
 volume_db = -10.0
 bus = "Music"
 
-[node name="ranhat1c" type="AudioStreamPlayer" parent="MDM/orange/concathats"]
+[node name="arp" type="AudioStreamPlayer" parent="MDM/orange/core"]
 stream = ExtResource( 9 )
 volume_db = -10.0
 bus = "Music"
 
-[node name="ranhat2a" type="AudioStreamPlayer" parent="MDM/orange/concathats"]
-stream = ExtResource( 10 )
-volume_db = -10.0
-bus = "Music"
-
-[node name="ranhat2b" type="AudioStreamPlayer" parent="MDM/orange/concathats"]
-stream = ExtResource( 11 )
-volume_db = -10.0
-bus = "Music"
-
-[node name="ranhat3a" type="AudioStreamPlayer" parent="MDM/orange/concathats"]
-stream = ExtResource( 12 )
-volume_db = -10.0
-bus = "Music"
-
-[node name="ranhat3b" type="AudioStreamPlayer" parent="MDM/orange/concathats"]
-stream = ExtResource( 13 )
-volume_db = -10.0
-bus = "Music"
-
-[node name="ranhat3c" type="AudioStreamPlayer" parent="MDM/orange/concathats"]
-stream = ExtResource( 14 )
-volume_db = -10.0
-bus = "Music"
-
-[node name="core" type="Node" parent="MDM/orange"]
-editor/display_folded = true
-script = ExtResource( 15 )
-__meta__ = {
-"_editor_icon": ExtResource( 5 )
-}
-
-[node name="epiano" type="AudioStreamPlayer" parent="MDM/orange/core"]
-stream = ExtResource( 16 )
-volume_db = -10.0
-bus = "Music"
-
-[node name="pad" type="AudioStreamPlayer" parent="MDM/orange/core"]
-stream = ExtResource( 17 )
-volume_db = -10.0
-bus = "Music"
-
-[node name="arp" type="AudioStreamPlayer" parent="MDM/orange/core"]
-stream = ExtResource( 18 )
-volume_db = -10.0
-bus = "Music"
-
 [node name="blue" type="Node" parent="MDM"]
-editor/display_folded = true
 script = ExtResource( 4 )
 __meta__ = {
 "_editor_icon": ExtResource( 5 )
@@ -160,12 +113,59 @@ loop = true
 
 [node name="core" type="Node" parent="MDM/blue"]
 editor/display_folded = true
-script = ExtResource( 15 )
+script = ExtResource( 6 )
 __meta__ = {
 "_editor_icon": ExtResource( 5 )
 }
 
 [node name="epiano" type="AudioStreamPlayer" parent="MDM/blue/core"]
+stream = ExtResource( 10 )
+volume_db = -10.0
+bus = "Music"
+
+[node name="concathats" type="Node" parent="MDM/blue"]
+editor/display_folded = true
+script = ExtResource( 11 )
+__meta__ = {
+"_editor_icon": ExtResource( 5 )
+}
+
+[node name="ranhat1a" type="AudioStreamPlayer" parent="MDM/blue/concathats"]
+stream = ExtResource( 12 )
+volume_db = -10.0
+bus = "Music"
+
+[node name="ranhat1b" type="AudioStreamPlayer" parent="MDM/blue/concathats"]
+stream = ExtResource( 13 )
+volume_db = -10.0
+bus = "Music"
+
+[node name="ranhat1c" type="AudioStreamPlayer" parent="MDM/blue/concathats"]
+stream = ExtResource( 14 )
+volume_db = -10.0
+bus = "Music"
+
+[node name="ranhat2a" type="AudioStreamPlayer" parent="MDM/blue/concathats"]
+stream = ExtResource( 15 )
+volume_db = -10.0
+bus = "Music"
+
+[node name="ranhat2b" type="AudioStreamPlayer" parent="MDM/blue/concathats"]
+stream = ExtResource( 16 )
+volume_db = -10.0
+bus = "Music"
+
+[node name="ranhat3a" type="AudioStreamPlayer" parent="MDM/blue/concathats"]
+stream = ExtResource( 17 )
+volume_db = -10.0
+bus = "Music"
+
+[node name="ranhat3b" type="AudioStreamPlayer" parent="MDM/blue/concathats"]
+stream = ExtResource( 18 )
+volume_db = -10.0
+bus = "Music"
+
+[node name="ranhat3c" type="AudioStreamPlayer" parent="MDM/blue/concathats"]
 stream = ExtResource( 19 )
 volume_db = -10.0
 bus = "Music"
@@ -185,7 +185,7 @@ loop = true
 
 [node name="core" type="Node" parent="MDM/red"]
 editor/display_folded = true
-script = ExtResource( 15 )
+script = ExtResource( 6 )
 __meta__ = {
 "_editor_icon": ExtResource( 5 )
 }
@@ -210,7 +210,7 @@ loop = true
 
 [node name="core" type="Node" parent="MDM/purple"]
 editor/display_folded = true
-script = ExtResource( 15 )
+script = ExtResource( 6 )
 __meta__ = {
 "_editor_icon": ExtResource( 5 )
 }
@@ -235,7 +235,7 @@ loop = true
 
 [node name="core" type="Node" parent="MDM/yellow"]
 editor/display_folded = true
-script = ExtResource( 15 )
+script = ExtResource( 6 )
 __meta__ = {
 "_editor_icon": ExtResource( 5 )
 }
@@ -281,7 +281,7 @@ transition_beats = 2.0
 loop = true
 
 [node name="core" type="Node" parent="MDM/green"]
-script = ExtResource( 15 )
+script = ExtResource( 6 )
 __meta__ = {
 "_editor_icon": ExtResource( 5 )
 }
@@ -306,7 +306,7 @@ loop = true
 
 [node name="core" type="Node" parent="MDM/pink"]
 editor/display_folded = true
-script = ExtResource( 15 )
+script = ExtResource( 6 )
 __meta__ = {
 "_editor_icon": ExtResource( 5 )
 }
@@ -2131,14 +2131,14 @@ script = ExtResource( 31 )
 
 [node name="orange_ball3" parent="balls" instance=ExtResource( 32 )]
 position = Vector2( 1280, -864 )
-linear_velocity = Vector2( 51.5216, -25.5677 )
-angular_velocity = 8.31778
+linear_velocity = Vector2( -14.2106, -31.6301 )
+angular_velocity = 7.47064
 colour = Color( 1, 0.603922, 0.25098, 1 )
 
 [node name="orange_ball4" parent="balls" instance=ExtResource( 32 )]
 position = Vector2( 1248, 576 )
-linear_velocity = Vector2( -24.1043, 39.5846 )
-angular_velocity = 13.5491
+linear_velocity = Vector2( 37.995, -8.19149 )
+angular_velocity = 47.6131
 colour = Color( 1, 0.603922, 0.25098, 1 )
 
 [node name="areas" type="Node2D" parent="."]
@@ -2241,3 +2241,5 @@ shape = SubResource( 7 )
 
 [node name="Node2D" type="Node2D" parent="."]
 
+[connection signal="bar" from="MDM" to="." method="_on_MDM_bar"]
+[connection signal="beat" from="MDM" to="." method="_on_MDM_beat"]
